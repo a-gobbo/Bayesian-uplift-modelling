@@ -4,7 +4,7 @@ This repository contains a Data Science project demonstrating the use of **Bayes
 
 Traditional predictive models can conflate a customer's baseline predisposition to buy with the actual incremental impact of a campaign. This project uses **Bayesian Logistic Regression** and **G-Computation** to isolate the true causal uplift of two different promotions, Buy one get one (BOGO) vs. Discount, compared to a No-Offer baseline.
 
-## 📂 Repository Structure
+##  Repository Structure
 
 **Dataset Summary:** The project utilizes a marketing dataset comprising 64,000 customer records. Key variables include:
 *   **Target:** `conversion` indicator, whether the customer bought the item.
