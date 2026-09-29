@@ -1,0 +1,23 @@
+Project: MCMC Bayesian Causal Inference for Marketing Uplift
+
+Objective:
+Estimate the causal effect (uplift) of three different promotional strategies on customer conversion rates:
+1. No Offer (Control Group)
+2. BOGO (Buy One Get One)
+3. Discount (Percentage discount)
+
+Historical data features:
+- recency: Months since the last purchase.
+- history: Total historical spend in dollars.
+- used_discount, used_bogo: Boolean flags indicating past usage of these promotions.
+- zip_code: Categorical (Urban, Suburban, Rural).
+- is_referral: Boolean flag indicating if the customer was acquired via referral.
+- channel: Acquisition channel (Phone, Web, Multichannel).
+
+Technical Requirements:
+The Data Science team will use PyMC (Python) with the NUTS sampler to:
+- Build a Bayesian Logistic Regression model for the conversion rate.
+- Include covariate adjustment (confounders) for unbiased causal estimates.
+- Vectorize operations using PyTensor.
+- Extract the full posterior distribution of the causal uplift (BOGO vs Control, Discount vs Control, and Head-to-Head Discount vs BOGO).
+- Simulate business ROI and cannibalization risk.

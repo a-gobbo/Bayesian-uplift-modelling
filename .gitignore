@@ -1,0 +1,18 @@
+# Python virtual environment
+.venv/
+env/
+venv/
+*.pyc
+__pycache__/
+
+# PyTensor / Theano caches
+.pytensor_cache/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# macOS system files
+.DS_Store
+
+# Ignore the alternate version directory (as requested)
+MCMC_simulation_tiers/
