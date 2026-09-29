@@ -36,4 +36,4 @@ To reproduce the analysis locally:
 3. *macOS Users*: PyTensor requires a native C++ compiler for optimization. If you encounter `<iostream>` missing errors, use the provided `run_clang_wrapper.sh` to correctly link your Apple Command Line Tools SDKs.
 
 ## Results Summary
-The Bayesian model rigorously demonstrates that the **Discount** strategy is strictly superior to the **BOGO** strategy, delivering an expected net incremental profit of **~$50,000** per 100,000 users, with a risk of loss tightly bounded at `<6%`.
+The Bayesian model rigorously demonstrates that, although the discount vs BOGO uplift is **~3%**, the **BOGO** strategy is superior to the **discount** strategy, delivering an expected net incremental profit of **~$70,000** per 100,000 users, with a risk of loss tightly bounded at `<4%`.
