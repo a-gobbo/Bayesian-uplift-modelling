@@ -2,7 +2,7 @@
 
 This repository contains a Data Science project demonstrating the use of **Bayesian Inference** to perform causal uplift modelling for marketing promotions. 
 
-Using the "Marketing Promotion Campaign Uplift Modelling" dataset (Kaggle, 64k customers), I analyzed a historical promotional campaign in which users had received one of three treatments (No Offer, Discount, Buy One Get One).
+Using the "Marketing Promotion Campaign Uplift Modelling" dataset (Hillstrom, 64k customers), I analyzed a historical promotional campaign in which users had received one of three treatments (No Offer, Discount, Buy One Get One).
 
 I developed a Bayesian Logistic Regression model (PyMC, NUTS/HMC sampler), adjusting for 9 observed confounders (RFM metrics, acquisition channel) to correct for observational bias. Using Robins' G-computation over the posterior trace, I estimated population-level counterfactuals to quantify the causal uplift of each intervention.
 
