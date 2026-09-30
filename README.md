@@ -2,7 +2,13 @@
 
 This repository contains a Data Science project demonstrating the use of **Bayesian Inference** to perform causal uplift modelling for marketing promotions. 
 
-Traditional predictive models can conflate a customer's baseline predisposition to buy with the actual incremental impact of a campaign. This project uses **Bayesian Logistic Regression** and **G-Computation** to isolate the true causal uplift of two different promotions, Buy one get one (BOGO) vs. Discount, compared to a No-Offer baseline.
+Using the "Marketing Promotion Campaign Uplift Modelling" dataset (Kaggle, 64k customers), I analyzed a historical promotional campaign in which users had received one of three treatments (No Offer, Discount, Buy One Get One).
+
+I developed a Bayesian Logistic Regression model (PyMC, NUTS/HMC sampler), adjusting for 9 observed confounders (RFM metrics, acquisition channel) to correct for observational bias. Using Robins' G-computation over the posterior trace, I estimated population-level counterfactuals to quantify the causal uplift of each intervention.
+
+Beyond point estimates, I propagated posterior uncertainty from the MCMC trace into a financial simulator: for each posterior draw, expected profit was computed via unit economics, yielding a full distribution of outcomes per strategy from which I derived expected profit and downside risk (VaR, probability of net loss).
+
+The analysis showed that while the Discount strategy produced a higher raw conversion uplift, BOGO performed better financially once risk was accounted for: BOGO delivered a $30k higher expected net profit per 100k users, with a <4% probability of net loss, and a positive 5th-percentile (VaR₉₅) outcome. Discount, by contrast, carried a $17k Value-at-Risk (VaR₉₅), exposing meaningful downside risk despite its higher point-estimate uplift.
 
 ##  Repository Structure
 
